@@ -35,7 +35,7 @@ public class FelineTest {
     }
 
     @Test //тест метода eatMeat(), что он выводит нужный список еды для Feline
-    public void eatMeatIsMeat() throws Exception {
+    public void felineEatMeatIsMeat() throws Exception {
         List<String> foodFofFeline = List.of("Животные", "Птицы", "Рыба");
         assertEquals("Должен быть список для хищника", foodFofFeline, feline.eatMeat());
     }

@@ -2,12 +2,14 @@ package practicum;
 import com.example.Feline;
 import com.example.Lion;
 import org.hamcrest.CoreMatchers;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import static org.junit.Assert.assertEquals;
 
@@ -19,6 +21,10 @@ public LionTestWithParam(String sex, boolean hasMane){
     this.sex=sex;
     this.hasMane=hasMane;
 }
+    @Before
+    public void init() {
+        MockitoAnnotations.initMocks(this);
+    }
     @Mock
     Feline feline;
     @Parameterized.Parameters
@@ -30,9 +36,10 @@ public LionTestWithParam(String sex, boolean hasMane){
     }
     @Test
     public void doesHaveManeTest() throws Exception {
-        Feline feline = new Feline();
+
         Lion lion = new Lion(feline, sex);
-        assertEquals("Грива у самца",hasMane, lion.doesHaveMane());
+
+        assertEquals("Грива у самца", hasMane, lion.doesHaveMane());
     }
 
 }
