@@ -28,14 +28,14 @@ import static org.junit.Assert.assertEquals;
         }
 
         @Parameterized.Parameters
-        public static Object[][] getParameters() {
+        public static Object[][] setSexForLion() {
             return new Object[][] {
                     {"Самец", true},
                     {"Самка", false}
             };
         }
 
-        @Test
+        @Test //тест наличия отсутсвия гривы
         public void testDoesHaveMane() throws Exception {
             lion = new Lion(sex, feline);
             boolean actual = lion.doesHaveMane();
