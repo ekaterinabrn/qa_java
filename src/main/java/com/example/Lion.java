@@ -3,7 +3,7 @@ package com.example;
 import java.util.List;
 
 public class Lion {
-    Feline feline; //делаем иньекцию зависимоти в класс для задания
+    private Feline feline; //делаем иньекцию зависимоти в класс для задания
     boolean hasMane;
 
     public Lion(Feline feline, String sex) throws Exception {

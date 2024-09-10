@@ -25,7 +25,7 @@ public class LionTest {
         Mockito.verify(feline).getKittens();//проверили у кошачьих
     }
     @Test
-    public void testGetFood() throws Exception {
+    public void lionGetFood() throws Exception {
         Lion lion = new Lion(feline, "Самка");
         // Ожидаемый список еды для хищника
         List<String> expectedFoodList = List.of("Животные", "Птицы", "Рыба");
