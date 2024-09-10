@@ -1,14 +1,11 @@
 package practicum;
+
 import com.example.Animal;
-import com.example.Feline;
-import com.example.Lion;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
@@ -28,7 +25,6 @@ public class AnimalWithParamTest {
     public static Object[][] object() {
         return new Object[][]{{"Травоядное", List.of("Трава", "Различные растения")},
                 {"Хищник", List.of("Животные", "Птицы", "Рыба")},
-                {"Неизвестный вид", List.of("", "")}
 
         };
     }
@@ -39,16 +35,14 @@ public class AnimalWithParamTest {
     }
 
     @Test
-    public void animalFoodTestWithException() {
-        try { List<String> actual = animal.getFood(animalKind);
+    public void animalFoodTestWithException() throws Exception {
+
+            List<String> actual = animal.getFood(animalKind);
             Assert.assertEquals(expectedFood, actual);
 
-
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
         }
 
 
     }
-}
+
 
