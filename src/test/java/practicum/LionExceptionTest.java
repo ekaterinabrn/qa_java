@@ -22,8 +22,8 @@ public class LionExceptionTest {
            Lion lion = new Lion("noname", feline );
             assertTrue(lion.doesHaveMane());
         } catch (Exception e) {
-
-            assertEquals("Используйте допустимые значения пола животного - самец или самка", e.getMessage());
+String expectedMessage = "Используйте допустимые значения пола животного - самец или самка";
+            assertEquals(expectedMessage, e.getMessage());
         }
 
     }
