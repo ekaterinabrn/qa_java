@@ -40,8 +40,8 @@ public class AnimalWithParamTest {
 
     @Test
     public void animalFoodTestWithException() {
-        try {
-            Assert.assertEquals(expectedFood,animal.getFood(animalKind));
+        try { List<String> actual = animal.getFood(animalKind);
+            Assert.assertEquals(expectedFood, actual);
 
 
         } catch (Exception e) {
