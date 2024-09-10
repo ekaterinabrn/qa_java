@@ -20,13 +20,13 @@ public class LionTest {
 
     @Test
     public void lionHasVoidGetKittens() throws Exception {
-        Lion lion = new Lion(feline, "Самка");
+        Lion lion = new Lion("Самка", feline );
         lion.getKittens(); //вызвали метод у льва
         Mockito.verify(feline).getKittens();//проверили у кошачьих
     }
     @Test
     public void lionGetFood() throws Exception {
-        Lion lion = new Lion(feline, "Самка");
+        Lion lion = new Lion("Самка", feline );
         // Ожидаемый список еды для хищника
         List<String> expectedFoodList = List.of("Животные", "Птицы", "Рыба");
         when(feline.getFood("Хищник")).thenReturn(expectedFoodList);
