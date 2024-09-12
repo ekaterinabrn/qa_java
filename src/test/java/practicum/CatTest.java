@@ -28,8 +28,6 @@ public class CatTest {
     @Test
     public void catGetPredatorListOfFood() throws Exception {
         Cat cat = new Cat(feline);
-        // List<String> expectedredatorFood = List.of("Животные", "Птицы", "Рыба");
-        // assertEquals("Должны совпадать списки еды", expectedredatorFood, cat.getFood());
         List<String> expectedListOfFood = List.of("Животные", "Птицы", "Рыба");
         when(feline.eatMeat()).thenReturn(expectedListOfFood);
         assertEquals("Вернулся некорректный список еды", expectedListOfFood, cat.getFood());
