@@ -8,7 +8,7 @@ public class AlexLion extends Lion {
     }
     public String getPlaceOfLiving(){return "Нью-Йоркский зоопарк" ;}
 
-    public List<String> getFriend()  { return List.of("зебра Марти", "бегемотиха Глория", "жираф Мелман");
+    public List<String> getFriend()  { return List.of("Марти", "Глория", "Мелман");
 
     }
 
